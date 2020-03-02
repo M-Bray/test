@@ -36,15 +36,22 @@ function AddTodoCard({ isClicked, setDashboardState, dashboardState }) {
 
 
     return (
-        <div>
-            <button onClick={handleClick}>Add Todo</button>
-            {isClicked && <form>
-                <label htmlFor={"title"}>Title</label>
-                <input onChange={handleInputs} name="title"></input>
-                <label htmlFor={"Category"}>Category</label>
-                <input onChange={handleInputs} name='category'></input>
-                <button onClick={AddTodo}>Add</button>
-                <button onClick={closeCard}>X</button>
+        <div className="add-todo-card-wrap">
+            <button className="add-todo-card-button-b" onClick={handleClick}>Add Todo</button>
+            {isClicked && <form className="add-todo-card-form-wrap">
+                <div className="add-todo-card-input-wrap">
+                    <label className="add-todo-card-label" htmlFor={"title"}>Title</label>
+                    <input className="add-todo-card-input" onChange={handleInputs} name="title"></input>
+                </div>
+                <div className="add-todo-card-input-wrap">
+                    <label className="add-todo-card-label" htmlFor={"Category"}>Category</label>
+                    <input className="add-todo-card-input" onChange={handleInputs} name='category'></input>
+                </div>
+                <div className="add-todo-card-button-wrap">
+                    <button className="add-todo-card-button" onClick={AddTodo}>Add</button>
+                    <button className="add-todo-card-button" onClick={closeCard}>X</button>
+                </div>
+
             </form>}
         </div>
     )

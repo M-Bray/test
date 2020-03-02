@@ -23,7 +23,7 @@ const DashboardPage = ({ loginState, handleInputs }) => {
 
 
     return (
-        <div>
+        <div className="dashboard-container">
             {/* {dashboardState.tasks && dashboardState.tasks.map(toDo => <ToDoCard toDo />)} */}
             {/* {console.log(dashboardState)} */}
             <AddTodoCard isClicked={dashboardState.isClicked} setDashboardState={setDashboardState} dashboardState={dashboardState} />
