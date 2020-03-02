@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
-import {useHistory} from 'react-router-dom'
-import {AuthContext} from '../contexts/AuthContext'
+import { useHistory } from 'react-router-dom'
+import { AuthContext } from '../contexts/AuthContext'
 import SignUpForm from './components/SignUpForm'
 import myFirebase from '../fire.js'
 
@@ -12,9 +12,10 @@ function SignUpPage() {
     const signUp = (e) => {
         e.preventDefault();
         if (signUpState.email)
-        myFirebase.auth().createUserWithEmailAndPassword(signUpState.email, signUpState.password).then(user => {authState.setAuthState({user: user, isLoading: false, isAuthenticated: true});
-        history.push('/dashboard')
-    })
+            myFirebase.auth().createUserWithEmailAndPassword(signUpState.email, signUpState.password).then(user => {
+                authState.setAuthState({ user: user, isLoading: false, isAuthenticated: true });
+                history.push('/dashboard')
+            })
     }
 
     const handleInputs = (e) => {

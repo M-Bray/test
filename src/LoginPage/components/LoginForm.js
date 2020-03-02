@@ -21,6 +21,6 @@ function LoginForm({ handleInputs, handleLogin }) {
             </form>
         </div>
     )
-}
+};
 
 export default LoginForm

@@ -15,17 +15,17 @@ const DashboardPage = ({ loginState, handleInputs }) => {
 
     useEffect(() => {
         const tasks = db.collection("tasks").where('uid', "==", authState && null != authState.user.uid ? authState.user.uid : null);
-        const toDos= tasks.get().then(results => {
+        const toDos = tasks.get().then(results => {
             console.log("tasks", results)
-            setDashboardState({...dashboardState, tasks: results})
+            setDashboardState({ ...dashboardState, tasks: results })
         })
     }, [loginState])
 
 
     return (
         <div>
-            {dashboardState.tasks && dashboardState.tasks.map(toDo => <ToDoCard toDo/>)}
-            {console.log(dashboardState)}
+            {/* {dashboardState.tasks && dashboardState.tasks.map(toDo => <ToDoCard toDo />)} */}
+            {/* {console.log(dashboardState)} */}
             <AddTodoCard isClicked={dashboardState.isClicked} setDashboardState={setDashboardState} dashboardState={dashboardState} />
         </div>
     );

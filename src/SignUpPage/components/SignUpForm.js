@@ -21,6 +21,6 @@ function SignUpForm({ handleInputs, handleSignUp }) {
             </form>
         </div>
     )
-}
+};
 
 export default SignUpForm

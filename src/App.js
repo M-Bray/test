@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import LoginPage from './LoginPage/LoginPage';
 import SignUpPage from './SignUpPage/SignUpPage';
@@ -10,8 +10,8 @@ import DashboardPage from './Dashboard/DashboardPage'
 function App() {
 
   return (
-    <Switch>   
-      <ProtectedRoute path = "/dashboard" component = {DashboardPage}/>
+    <Switch>
+      <ProtectedRoute path="/dashboard" component={DashboardPage} />
       <Route path={'/login'} component={LoginPage} />
       <Route path={'/'} component={SignUpPage} />
     </Switch>

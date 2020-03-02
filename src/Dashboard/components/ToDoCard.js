@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToDoCard = ({toDo}) => {
+const ToDoCard = ({ toDo }) => {
     return (
         <div>
             <h1>{toDo.name}</h1>
