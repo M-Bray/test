@@ -1,14 +1,16 @@
 import React from 'react';
-
 const ToDoCard = ({ toDo }) => {
+    console.log(toDo)
+    const newToDo = toDo && toDo.data()
     return (
-        <div>
-            <h1>{toDo.name}</h1>
-            <p></p>
-            <button>Edit</button>
-            <button>Delete</button>
+        <div className="card-container">
+            <form className="form-container">
+                <h1>{newToDo.title}</h1>
+                <p>{newToDo.category}</p>
+                <button>Edit</button>
+                <button>Delete</button>
+            </form>
         </div>
     );
 };
-
 export default ToDoCard;
