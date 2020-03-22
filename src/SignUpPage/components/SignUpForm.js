@@ -11,11 +11,11 @@ function SignUpForm({ handleInputs, handleSignUp }) {
                     <h1 className="card-header">Sign Up</h1>
                     <div className="card-input-wrap">
                         <label className="card-label" htmlFor="email">E-mail:</label>
-                        <input className="card-input" onChange={handleInputs} name="email"></input>
+                        <input className="card-input" onChange={handleInputs} name="email"/>
                     </div>
                     <div className="card-input-wrap">
                         <label className="card-label" htmlFor="password">Password:</label>
-                        <input className="card-input" onChange={handleInputs} name="password"></input>
+                        <input className="card-input" onChange={handleInputs} name="password"/>
                     </div>
                     <button className="card-button" onClick={handleSignUp}>Sign Up</button>
                     <Link className="link-class" to="/login">Exisiting Users</Link>

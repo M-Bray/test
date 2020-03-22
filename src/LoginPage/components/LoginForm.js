@@ -11,11 +11,11 @@ function LoginForm({ handleInputs, handleLogin }) {
                     <h1 className="card-header">Login</h1>
                     <div className="card-input-wrap">
                         <label className="card-label" htmlFor="email">E-mail:</label>
-                        <input className="card-input" onChange={handleInputs} name="email"></input>
+                        <input className="card-input" onChange={handleInputs} name="email"/>
                     </div>
                     <div className="card-input-wrap">
                         <label className="card-label" htmlFor="password">Password:</label>
-                        <input className="card-input" onChange={handleInputs} name="password"></input>
+                        <input className="card-input" onChange={handleInputs} name="password"/>
                     </div>
                     <button className="card-button" onClick={handleLogin}>Login</button>
                     <Link className="link-class" to="/">Sign Up</Link>
